@@ -11,7 +11,7 @@ export const getFloat16 = (exponentWidth: number, significandPrecision: number) 
 
 		const e = (uint16 & exponentMask) >> significandPrecision;
 		const f = uint16 & fractionMask;
-		const sign = (-1) ** (uint16 >> 15);
+		const sign = uint16 >> 15  ? -1 : 1;
 
 		if (e === 0) {
 			return sign * (2 ** exponentMin) * (f / (2 ** significandPrecision));
