@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "test": "tsc && mocha 'dist/test/**/*.js'"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/jest": "^29.5.3",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
